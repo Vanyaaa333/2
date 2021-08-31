@@ -7,7 +7,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-
 public class Main {
 
     protected static WebDriver driver;
@@ -21,8 +20,7 @@ public class Main {
     public static void main(String[] args) {
         ChromeOptions options = new ChromeOptions();
         options.addArguments(
-                "start-maximized",
-                "--headless"
+                "start-maximized"
         );
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
@@ -37,5 +35,6 @@ public class Main {
                 EXPECTED_PRODUCT_ADDED_NUMB_LOCATOR,"Added product count isn't right");
         driver.quit();
     }
+
 
 }
